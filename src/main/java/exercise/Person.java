@@ -1,24 +1,34 @@
 package main.java.exercise;
 
 public class Person {
+
+
     public enum Gender {
         FEMALE,
-        MALE
+        MALE;
     }
-
+    private String name;
     private int weightInKgs;
     private int heightInCm;
     private int ageInYears;
     private Gender gender;
-
     private ActivityLevel activityLevel;
 
-    public Person(int weightInKgs, int heightInCm, int ageInYears, Gender gender, ActivityLevel activityLevel) {
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public Person(String name, int weightInKgs, int heightInCm, int ageInYears, Gender gender, ActivityLevel activityLevel) {
+        this(name);
         this.weightInKgs = weightInKgs;
         this.heightInCm = heightInCm;
         this.ageInYears = ageInYears;
         this.gender = gender;
         this.activityLevel = activityLevel;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setWeightInKgs(int weightInKgs) {
