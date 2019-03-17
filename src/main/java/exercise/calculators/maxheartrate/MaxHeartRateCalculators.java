@@ -1,5 +1,7 @@
 package main.java.exercise.calculators.maxheartrate;
 
+import main.java.exercise.Person;
+
 public class MaxHeartRateCalculators {
 
     /**
@@ -13,36 +15,36 @@ public class MaxHeartRateCalculators {
     }
 
     /**
-     * Returns max heart rate for given age;
-     * (191.5 - (0.007 * age^2))
+     * Returns max heart rate for given person;
+     * (191.5 - (0.007 * person^2))
      *
-     * @param age
+     * @param person
      * @return result of first max heart rate formula
      */
-    public static double getHrMaxOne(int age) {
-        return 191.5 - (0.007 * getPwrTwo(age));
+    public static double getHrMaxOne(Person person) {
+        return 191.5 - (0.007 * getPwrTwo(person.getAgeInYears()));
     }
 
     /**
-     * Returns max heart rate for given age;
-     * (206.9 - (0.67 * age))
+     * Returns max heart rate for given person;
+     * (206.9 - (0.67 * person))
      *
-     * @param age
+     * @param person
      * @return result of second max heart rate formula
      */
-    public static double getHrMaxTwo(int age) {
-        return 206.9 - (0.67 * age);
+    public static double getHrMaxTwo(Person person) {
+        return 206.9 - (0.67 * person.getAgeInYears());
     }
 
     /**
-     * Returns max heart rate for given age;
-     * (163 + (1.16 * age) - (0.018 * (age^2))
+     * Returns max heart rate for given person;
+     * (163 + (1.16 * person.getAgeInYears()) - (0.018 * (person.getAgeInYears()^2))
      *
-     * @param age
+     * @param person
      * @return result of thrid max heart rate formula
      */
-    public static double getHrMaxThree(int age) {
-        return 163 + (1.16 * age) - (0.018 * getPwrTwo(age));
+    public static double getHrMaxThree(Person person) {
+        return 163 + (1.16 * person.getAgeInYears()) - (0.018 * getPwrTwo(person.getAgeInYears()));
     }
 }
 
