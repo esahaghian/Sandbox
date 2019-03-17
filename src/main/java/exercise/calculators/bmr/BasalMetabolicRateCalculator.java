@@ -1,19 +1,11 @@
-package main.java.exercise;
+package main.java.exercise.calculators.bmr;
 
-import main.java.exercise.Person.Gender;
+import main.java.exercise.Person;
 
 public class BasalMetabolicRateCalculator {
 
-    public static void main(String[] args) {
-        Person edi = new Person(90, 178, 40, Gender.MALE, ActivityLevel.SEDENTARY);
-        double bmrResult = getBmr(edi);
-        double caloriesResult = getCalories(edi);
-        System.out.println("BMR = " + bmrResult);
-        System.out.println("Necesar calorii zilnice = " + caloriesResult);
-    }
-
     //@formatter:off
-    private static double getCalories(Person person) {
+    public static double getCalories(Person person) {
         switch (person.getActivityLevel()) {
             case SEDENTARY:
                 return getBmr(person) * 1.2;
@@ -29,7 +21,7 @@ public class BasalMetabolicRateCalculator {
         throw new UnsupportedOperationException("Incorrect activity level");
     }
 
-    private static double getBmr(Person person) {
+    public static double getBmr(Person person) {
         switch (person.getGender()) {
             case MALE:
                 return getMaleBmr(person.getWeightInKgs(), person.getHeightInCm(), person.getAgeInYears());

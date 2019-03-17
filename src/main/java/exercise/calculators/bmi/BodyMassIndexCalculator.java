@@ -1,22 +1,9 @@
-package main.java.exercise;
-
-import java.text.DecimalFormat;
+package main.java.exercise.calculators.bmi;
 
 public class BodyMassIndexCalculator {
-    public static void main(String[] args) {
-        // bmi = kg/m2
-        int weightInKgs = 130;
-        double heightInMeters = 1.78;
-        double pwrTwo = (heightInMeters * heightInMeters);
-        double bmi = weightInKgs / pwrTwo;
 
-        System.out.println(bmiEvaluator(bmi));
-        DecimalFormat f = new DecimalFormat("##.00");
-        System.out.println("BMI Value: " + f.format(bmi));
-    }
-
-    private static String bmiEvaluator(double bmi) {
-          if (bmi <= 15) {
+    public static String bmiEvaluator(double bmi) {
+        if (bmi <= 15) {
             return "Very severely underweight";
         } else if (bmi <= 16 && bmi > 15) {
             return "Severely underweight";

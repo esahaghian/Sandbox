@@ -1,6 +1,6 @@
 package main.java.exercise;
 
-enum ActivityLevel {
+public enum ActivityLevel {
     SEDENTARY,
     LIGHTLY_ACTIVE,
     MODERATELY_ACTIVE,

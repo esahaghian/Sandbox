@@ -1,12 +1,6 @@
-package main.java.exercise;
+package main.java.exercise.calculators.maxheartrate;
 
 public class MaxHeartRateCalculators {
-    public static void main(String[] args) {
-       int age = 20;
-        System.out.println(getHrMaxOne(age));
-        System.out.println(getHrMaxTwo(age));
-        System.out.println(getHrMaxThree(age));
-    }
 
     /**
      * Returns a given number to the power of two.
@@ -25,7 +19,7 @@ public class MaxHeartRateCalculators {
      * @param age
      * @return result of first max heart rate formula
      */
-    private static double getHrMaxOne(int age) {
+    public static double getHrMaxOne(int age) {
         return 191.5 - (0.007 * getPwrTwo(age));
     }
 
@@ -36,7 +30,7 @@ public class MaxHeartRateCalculators {
      * @param age
      * @return result of second max heart rate formula
      */
-    private static double getHrMaxTwo(int age) {
+    public static double getHrMaxTwo(int age) {
         return 206.9 - (0.67 * age);
     }
 
@@ -47,7 +41,7 @@ public class MaxHeartRateCalculators {
      * @param age
      * @return result of thrid max heart rate formula
      */
-    private static double getHrMaxThree(int age) {
+    public static double getHrMaxThree(int age) {
         return 163 + (1.16 * age) - (0.018 * getPwrTwo(age));
     }
 }

@@ -1,7 +1,7 @@
 package main.java.exercise;
 
 public class Person {
-    enum Gender {
+    public enum Gender {
         FEMALE,
         MALE
     }
