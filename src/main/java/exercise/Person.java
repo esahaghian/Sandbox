@@ -1,13 +1,16 @@
 package main.java.exercise;
 
-import main.java.exercise.BasalMetabolicRateCalculator.Gender;
-import main.java.exercise.BasalMetabolicRateCalculator.ActivityLevel;
-
 public class Person {
+    enum Gender {
+        FEMALE,
+        MALE
+    }
+
     private int weightInKgs;
     private int heightInCm;
     private int ageInYears;
     private Gender gender;
+
     private ActivityLevel activityLevel;
 
     public Person(int weightInKgs, int heightInCm, int ageInYears, Gender gender, ActivityLevel activityLevel) {
@@ -50,9 +53,12 @@ public class Person {
         this.gender = gender;
     }
 
-    public void setActivityLevel(ActivityLevel activityLevel) { this.activityLevel = activityLevel; }
+    public void setActivityLevel(ActivityLevel activityLevel) {
+        this.activityLevel = activityLevel;
+    }
 
-    public  ActivityLevel getActivityLevel () { return activityLevel;
+    public ActivityLevel getActivityLevel() {
+        return activityLevel;
     }
 
 }
