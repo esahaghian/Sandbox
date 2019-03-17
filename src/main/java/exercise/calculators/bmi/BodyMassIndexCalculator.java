@@ -1,6 +1,17 @@
 package main.java.exercise.calculators.bmi;
 
+import main.java.exercise.Person;
+
 public class BodyMassIndexCalculator {
+
+    public static String bmiCalculator(Person person) {
+        int weightInKgs = person.getWeightInKgs();
+        double heightInMeters = person.getHeightInCm() * 100;
+        double pwrTwo = (heightInMeters * heightInMeters);
+        double bmi = weightInKgs / pwrTwo;
+
+        return bmiEvaluator(bmi);
+    }
 
     public static String bmiEvaluator(double bmi) {
         if (bmi <= 15) {
