@@ -1,8 +1,6 @@
 package main.java.exercise;
 
 public class Person {
-
-
     public enum Gender {
         FEMALE,
         MALE;
