@@ -36,8 +36,10 @@ public class BasalMetabolicRateCalculator {
 
     private static double getBmr(Person person) {
         switch (person.getGender()) {
-            case MALE: return getMaleBmr(person.getWeightInKgs(), person.getHeightInCm(), person.getAgeInYears());
-            case FEMALE: return getFemaleBmr(person.getWeightInKgs(), person.getHeightInCm(), person.getAgeInYears());
+            case MALE:
+                return getMaleBmr(person.getWeightInKgs(), person.getHeightInCm(), person.getAgeInYears());
+            case FEMALE:
+                return getFemaleBmr(person.getWeightInKgs(), person.getHeightInCm(), person.getAgeInYears());
         }
         throw new UnsupportedOperationException("Incorrect gender");
     }
