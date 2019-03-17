@@ -1,7 +1,5 @@
 package main.java.exercise;
 
-import java.text.DecimalFormat;
-
 import static main.java.exercise.calculators.bmi.BodyMassIndexCalculator.bmiCalculator;
 import static main.java.exercise.calculators.bmr.BasalMetabolicRateCalculator.getBmr;
 import static main.java.exercise.calculators.bmr.BasalMetabolicRateCalculator.getCalories;
