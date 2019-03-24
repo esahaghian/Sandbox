@@ -6,7 +6,7 @@ public class BodyMassIndexCalculator {
 
     public static String bmiCalculator(Person person) {
         int weightInKgs = person.getWeightInKgs();
-        double heightInMeters = person.getHeightInCm() * 100;
+        double heightInMeters = person.getHeightInCm() * 0.01;
         double pwrTwo = (heightInMeters * heightInMeters);
         double bmi = weightInKgs / pwrTwo;
 
