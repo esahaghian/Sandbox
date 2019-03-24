@@ -23,18 +23,19 @@ public class TestCalculators {
         personList.add(anca);
         personList.add(eric);
 
-        for (int i = 0; i < personList.size(); i++) {
-            double bmrResult = getBmr(personList.get(i));
-            double caloriesResult = getCalories(personList.get(i));
 
-            StringBuilder stringBuilder = new StringBuilder("Person's name: " + personList.get(i).getName());
+        for (Person person : personList) {
+            double bmrResult = getBmr(person);
+            double caloriesResult = getCalories(person);
+
+            StringBuilder stringBuilder = new StringBuilder("Person's name: " + person.getName());
             stringBuilder.append("\n");
-            stringBuilder.append("BMI Classification: " + bmiCalculator(personList.get(i)));
+            stringBuilder.append("BMI Classification: " + bmiCalculator(person));
             stringBuilder.append("\n");
             stringBuilder.append("Max Heart Rate based on 3 formulas:");
-            stringBuilder.append("\n\t Formula 1 = " + getHrMaxOne(personList.get(i)));
-            stringBuilder.append("\n\t Formula 2 = " + getHrMaxTwo(personList.get(i)));
-            stringBuilder.append("\n\t Formula 3 = " + getHrMaxThree(personList.get(i)));
+            stringBuilder.append("\n\t Formula 1 = " + getHrMaxOne(person));
+            stringBuilder.append("\n\t Formula 2 = " + getHrMaxTwo(person));
+            stringBuilder.append("\n\t Formula 3 = " + getHrMaxThree(person));
             stringBuilder.append("\n");
             stringBuilder.append("BMR = " + bmrResult);
             stringBuilder.append("\n");
