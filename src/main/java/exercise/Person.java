@@ -5,6 +5,7 @@ public class Person {
         FEMALE,
         MALE;
     }
+
     private String name;
     private int weightInKgs;
     private int heightInCm;
@@ -69,4 +70,15 @@ public class Person {
         return activityLevel;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", weightInKgs=" + weightInKgs +
+                ", heightInCm=" + heightInCm +
+                ", ageInYears=" + ageInYears +
+                ", gender=" + gender +
+                ", activityLevel=" + activityLevel +
+                '}';
+    }
 }
