@@ -1,4 +1,4 @@
-package main.java.exercise.Inheritance;
+package main.java.exercise.Inheritance1;
 
 public interface OfficeWorker {
 
