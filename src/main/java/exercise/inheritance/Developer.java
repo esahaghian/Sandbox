@@ -1,4 +1,4 @@
-package main.java.exercise.Inheritance1;
+package main.java.exercise.inheritance;
 
 public class Developer extends Staff {
     private String specialty;

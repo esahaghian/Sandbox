@@ -1,4 +1,4 @@
-package main.java.exercise.Inheritance1;
+package main.java.exercise.inheritance;
 
 public class CEO extends Staff {
     private int netWorth;
